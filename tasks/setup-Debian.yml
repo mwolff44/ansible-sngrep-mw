@@ -1,0 +1,20 @@
+---
+- name: Ensure dependencies are installed.
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+    state: present
+
+- name: Add Irontec apt key.
+  apt_key:
+    url: {{ irontec_key_url_repository }}
+    state: present
+  register: add_repository_key
+  ignore_errors: "{{ sngrep_apt_ignore_key_error }}"
+
+- name: Add Irontec repository.
+  apt_repository:
+    repo: "{{ irontec_apt_repository }}"
+    state: present
+    update_cache: true

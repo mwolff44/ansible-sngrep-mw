@@ -1,5 +1,18 @@
 ---
-ansible-sngrep-mw_Debian
+# Package defaults
+sngrep_package: "sngrep"
+sngrep_package_state: present
 
-ansible-sngrep-mw_RedHat
+# Irontec repo
+irontec_key_url_repository: http://packages.irontec.com/public.key
+irontec_key_id_repository: NotUsedNow 
+
+# Used only for Debian/Ubuntu.
+sngrep_apt_arch: amd64
+sngrep_apt_repository: "deb [arch={{ sngrep_apt_arch }}] http://packages.irontec.com/{{ ansible_distribution|lower }} {{ ansible_distribution_release }} main"
+sngrep_apt_ignore_key_error: true
+
+# Used only for RedHat/CentOS/Fedora.
+sngrep_yum_arch: amd64
+sngrep_yum_repo_url: http://packages.irontec.com/{{ (ansible_distribution == "Fedora") | ternary("fedora","centos") }}/{{ ansible_distribution_release }}/{{ sngrep_yum_arch }}
 

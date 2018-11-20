@@ -1,10 +1,11 @@
 ---
-- name: Configure repository
-  # TODO
+- include_tasks: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
 
-- name: Add Irontec repositories public key
-  # TODO
+- include_tasks: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
 
-- name: Install SNGREP
-  # TODO
-
+- name: Install Sngrep.
+  package:
+    name: "{{ sngrep_package }}"
+    state: "{{ sngrep_package_state }}"

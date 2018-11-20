@@ -6,24 +6,27 @@ galaxy_info:
   author: Mathias WOLFF
   description: Ansible role for sngrep, the great SIP tool
   license: "license (Apache 2.0)"
-  min_ansible_version: 2.7
+  min_ansible_version: 2.4
   platforms:
+    - name: Centos
+      version:
+        - 6
+        - 7
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Fedora
+      versions:
+        - all
     - name: Ubuntu
       versions:
         - trusty
         - xenial
   galaxy_tags:
-  # - cloud
-  # - cloud:ec2
-  # - cloud:gce
-  # - cloud:rax
-  # - clustering
-  # - database
-  # - database:nosql
-  # - database:sql
-  # - development
-  # - monitoring
-  # - networking
-  # - packaging
-  # - system
-  # - web
+    - sip
+    - capture
