@@ -13,6 +13,5 @@ sngrep_apt_repository: "deb [arch={{ sngrep_apt_arch }}] http://packages.irontec
 sngrep_apt_ignore_key_error: true
 
 # Used only for RedHat/CentOS/Fedora.
-sngrep_yum_arch: amd64
-sngrep_yum_repo_url: http://packages.irontec.com/{{ (ansible_distribution == "Fedora") | ternary("fedora","centos") }}/{{ ansible_distribution_release }}/{{ sngrep_yum_arch }}
-
+sngrep_yum_arch: x86_64
+sngrep_yum_repo_url: http://packages.irontec.com/{{ (ansible_distribution == "Fedora") | ternary("fedora","centos") }}/{{ ansible_distribution_major_version }}/{{ sngrep_yum_arch }}/

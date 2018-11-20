@@ -1,13 +1,11 @@
 ---
 - name: Add Irontec key.
   rpm_key:
-    key: {{ irontec_key_url_repository }}
+    key: "{{ irontec_key_url_repository }}"
     state: present
 
 - name: Add Irontec repository.
-  get_url:
-    url: "{{ irontec_yum_repo_url }}"
-    dest: '/etc/yum.repos.d/irontec.repo'
-    owner: root
-    group: root
-    mode: 0644
+  yum_repository:
+    name: irontec
+    description: Irontec repository
+    baseurl: "{{ sngrep_yum_repo_url }}"
