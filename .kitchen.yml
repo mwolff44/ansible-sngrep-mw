@@ -6,13 +6,17 @@ driver:
   use_sudo: false
 
 platforms:
+  - name: ubuntu-14.04
+    driver_config:
+      image: ubuntu:14.04
+      platform: ubuntu
   - name: ubuntu-16.04
     driver_config:
       image: ubuntu:16.04
       platform: ubuntu
 
 provisioner:
-  ansible_connection: local
+  ansible_connection: ssh
   ansible_host_key_checking: false
   ansible_version: latest
   custom_pre_play_command: sudo chown -R kitchen:kitchen /home/kitchen/.ansible
