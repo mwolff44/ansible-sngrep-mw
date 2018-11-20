@@ -1,0 +1,10 @@
+---
+- name: Configure repository
+  # TODO
+
+- name: Add Irontec repositories public key
+  # TODO
+
+- name: Install SNGREP
+  # TODO
+
