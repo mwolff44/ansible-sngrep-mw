@@ -1,0 +1,5 @@
+---
+- hosts: all
+  roles:
+    # Name of your directory containing the role. In case of github, it should be your github repository name
+    - { role: ansible-sngrep-mw, become: yes }
