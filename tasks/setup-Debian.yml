@@ -15,6 +15,6 @@
 
 - name: Add Irontec repository.
   apt_repository:
-    repo: "{{ irontec_apt_repository }}"
+    repo: "{{ sngrep_apt_repository }}"
     state: present
     update_cache: true
