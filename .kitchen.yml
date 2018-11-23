@@ -26,7 +26,7 @@ provisioner:
   require_ansible_repo: true
   require_chef_for_busser: false
   require_ruby_for_busser: false
-  requirements_path: ./test/integration/requirements.yml
+  requirements_path: ./test/integration/default/default.yml
   role_name: ansible-sngrep-mw
   roles_path: .
 
