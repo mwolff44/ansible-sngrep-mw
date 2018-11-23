@@ -8,7 +8,7 @@
 
 - name: Add Irontec apt key.
   apt_key:
-    url: {{ irontec_key_url_repository }}
+    url: "{{ irontec_key_url_repository }}"
     state: present
   register: add_repository_key
   ignore_errors: "{{ sngrep_apt_ignore_key_error }}"
