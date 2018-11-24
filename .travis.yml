@@ -4,7 +4,7 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: ansible-sngrep-mw
+    - ROLE_NAME: sngrep
   matrix:
     - MOLECULE_DISTRO: centos7
     - MOLECULE_DISTRO: ubuntu1804
@@ -17,8 +17,7 @@ install:
 before_script:
   # Use actual Ansible Galaxy role name for the project directory.
   - cd ../
-  - mv $ROLE_NAME mwolff44.$ROLE_NAME
-  - cd mwolff44.$ROLE_NAME
+  - cd ansible-$ROLE_NAME-mw
 
 script:
   # Run tests.
