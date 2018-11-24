@@ -5,7 +5,7 @@ sngrep_package_state: present
 
 # Irontec repo
 irontec_key_url_repository: http://packages.irontec.com/public.key
-irontec_key_id_repository: NotUsedNow 
+irontec_key_id_repository: NotUsedNow
 
 # Used only for Debian/Ubuntu.
 sngrep_apt_arch: amd64

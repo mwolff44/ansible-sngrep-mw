@@ -5,6 +5,7 @@
       - apt-transport-https
       - ca-certificates
     state: present
+  when: ansible_distribution_release == 'stretch'
 
 - name: Add Irontec apt key.
   apt_key:
