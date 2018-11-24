@@ -1,6 +1,6 @@
 ---
 
-allow_duplicates: no
+allow_duplicates: false
 
 galaxy_info:
   author: Mathias WOLFF
@@ -11,19 +11,15 @@ galaxy_info:
   platforms:
     - name: Centos
       version:
-        - 6
         - 7
     - name: Debian
       versions:
-        - jessie
         - stretch
     - name: EL
       versions:
-        - 6
         - 7
     - name: Ubuntu
       versions:
-        - trusty
         - xenial
   galaxy_tags:
     - sip
