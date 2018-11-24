@@ -6,8 +6,8 @@ galaxy_info:
   author: Mathias WOLFF
   description: Ansible role for sngrep, the great SIP tool
   company: Celea Consulting
-  license: "license (Apache 2.0)"
-  min_ansible_version: 2.4
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.7
   platforms:
     - name: Centos
       version:
