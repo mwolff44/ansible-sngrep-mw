@@ -1,7 +1,7 @@
 # Ansible Role: ansible-sngrep-mw
 
 * Master branch: [![Build Status](https://travis-ci.org/mwolff44/ansible-sngrep-mw.svg?branch=master)](https://travis-ci.org/mwolff44/ansible-sngrep-mw)
-* Development branch: [![Build Status](https://travis-ci.org/mwolff44/ansible-sngrep-mw.svg?branch=development)](https://travis-ci.org/mwolff44/ansible-sngrep-mw)
+
 
 Ansible role for sngrep, the great SIP tool
 
