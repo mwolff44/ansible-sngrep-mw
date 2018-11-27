@@ -9,9 +9,6 @@ galaxy_info:
   license: "license (Apache 2.0)"
   min_ansible_version: 2.4
   platforms:
-    - name: Centos
-      version:
-        - 7
     - name: Debian
       versions:
         - stretch
